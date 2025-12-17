@@ -66,6 +66,10 @@ async def get_status_checks():
     
     return status_checks
 
+# Import and include registration routes
+from routes.registrations import router as registrations_router
+api_router.include_router(registrations_router)
+
 # Include the router in the main app
 app.include_router(api_router)
 
