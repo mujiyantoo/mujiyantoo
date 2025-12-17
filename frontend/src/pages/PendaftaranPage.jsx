@@ -151,6 +151,8 @@ const PendaftaranPage = () => {
         description: "Tidak dapat terhubung ke server. Silakan coba lagi.",
         variant: "destructive"
       });
+    } finally {
+      setIsSubmitting(false);
     }
   };
 
