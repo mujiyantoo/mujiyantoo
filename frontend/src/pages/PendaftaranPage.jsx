@@ -578,10 +578,20 @@ const PendaftaranPage = () => {
                   <div className="pt-4">
                     <Button
                       type="submit"
-                      className="w-full bg-[#5A9C9B] hover:bg-[#4a8584] text-white font-bold py-6 text-lg rounded-full shadow-lg hover:scale-105 transition-all"
+                      disabled={isSubmitting}
+                      className="w-full bg-[#5A9C9B] hover:bg-[#4a8584] text-white font-bold py-6 text-lg rounded-full shadow-lg hover:scale-105 transition-all disabled:opacity-50 disabled:cursor-not-allowed"
                     >
-                      <CheckCircle className="mr-2 h-5 w-5" />
-                      Kirim Pendaftaran
+                      {isSubmitting ? (
+                        <>
+                          <span className="animate-spin mr-2">⏳</span>
+                          Mengirim...
+                        </>
+                      ) : (
+                        <>
+                          <CheckCircle className="mr-2 h-5 w-5" />
+                          Kirim Pendaftaran
+                        </>
+                      )}
                     </Button>
                   </div>
                 </div>
