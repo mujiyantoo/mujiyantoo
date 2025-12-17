@@ -9,6 +9,7 @@ import TentangPage from "./pages/TentangPage";
 import GaleriPage from "./pages/GaleriPage";
 import KontakPage from "./pages/KontakPage";
 import PendaftaranPage from "./pages/PendaftaranPage";
+import AdminPage from "./pages/AdminPage";
 import { Toaster } from "./components/ui/sonner";
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
           <Route path="/galeri" element={<GaleriPage />} />
           <Route path="/kontak" element={<KontakPage />} />
           <Route path="/pendaftaran" element={<PendaftaranPage />} />
+          <Route path="/admin" element={<AdminPage />} />
         </Routes>
         <Footer />
         <Toaster />
