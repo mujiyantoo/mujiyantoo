@@ -89,7 +89,7 @@ export const testimonials = [
     id: 1,
     name: 'Siti Nurhaliza',
     role: 'Orang Tua Siswa SD',
-    photo: 'https://i.pravatar.cc/150?img=1',
+    photo: null,
     rating: 5,
     text: 'Alhamdulillah, anak saya sangat terbantu dengan bimbingan dari BIN. Nilai matematika meningkat drastis dari 65 menjadi 90. Tentor sangat sabar dan komunikatif!',
     program: 'Kelas Reguler SD'
@@ -98,7 +98,7 @@ export const testimonials = [
     id: 2,
     name: 'Ahmad Fauzi',
     role: 'Siswa SMP Kelas 9',
-    photo: 'https://i.pravatar.cc/150?img=12',
+    photo: null,
     rating: 5,
     text: 'Metode belajar di BIN bikin aku lebih paham konsep, bukan cuma hafalan. Tentor juga asyik dan bisa jadi teman curhat soal pelajaran.',
     program: 'Kelas Reguler SMP'
@@ -107,7 +107,7 @@ export const testimonials = [
     id: 3,
     name: 'Dewi Lestari',
     role: 'Orang Tua Siswa SMA',
-    photo: 'https://i.pravatar.cc/150?img=5',
+    photo: null,
     rating: 5,
     text: 'Program intensif UTBK sangat membantu anak saya. Alhamdulillah lulus SNBT dan diterima di PTN favorit. Terima kasih BIN Bimbel!',
     program: 'Program Intensif UTBK'
@@ -116,7 +116,7 @@ export const testimonials = [
     id: 4,
     name: 'Rizky Ramadhan',
     role: 'Siswa SMA Kelas 12',
-    photo: 'https://i.pravatar.cc/150?img=13',
+    photo: null,
     rating: 5,
     text: 'Les privat di BIN fleksibel banget jadwalnya. Materi juga bisa disesuaikan sama kebutuhan aku. Worth it!',
     program: 'Kelas Privat'
@@ -125,7 +125,7 @@ export const testimonials = [
     id: 5,
     name: 'Ibu Ratna',
     role: 'Orang Tua Siswa SD',
-    photo: 'https://i.pravatar.cc/150?img=9',
+    photo: null,
     rating: 5,
     text: 'Harga terjangkau, kualitas bagus. Anak saya jadi lebih semangat belajar dan PR sekolah jadi lancar dikerjakan.',
     program: 'Kelas Reguler SD'
@@ -134,7 +134,7 @@ export const testimonials = [
     id: 6,
     name: 'Fahmi Hakim',
     role: 'Siswa SMP Kelas 8',
-    photo: 'https://i.pravatar.cc/150?img=15',
+    photo: null,
     rating: 5,
     text: 'Belajar di BIN seru! Bukan cuma fokus soal, tapi juga diajarin cara berpikir kritis. Terima kasih kak tentor!',
     program: 'Kelas Reguler SMP'
