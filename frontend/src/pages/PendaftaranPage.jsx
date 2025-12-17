@@ -79,41 +79,77 @@ const PendaftaranPage = () => {
       return;
     }
 
-    // Mock submission - akan diganti dengan API call
-    console.log('Form Data:', formData);
-    
-    toast({
-      title: "Pendaftaran Berhasil!",
-      description: "Data Anda telah kami terima. Tim kami akan segera menghubungi Anda.",
-    });
+    // Validasi mata pelajaran
+    if (formData.mata_pelajaran.length === 0) {
+      toast({
+        title: "Mata Pelajaran Diperlukan",
+        description: "Mohon pilih minimal 1 mata pelajaran",
+        variant: "destructive"
+      });
+      return;
+    }
 
-    // Reset form
-    setFormData({
-      nama_lengkap: '',
-      nama_panggilan: '',
-      jenis_kelamin: '',
-      tempat_lahir: '',
-      tanggal_lahir: '',
-      asal_sekolah: '',
-      kelas: '',
-      alamat: '',
-      telepon: '',
-      email: '',
-      nama_ayah: '',
-      pekerjaan_ayah: '',
-      telepon_ayah: '',
-      nama_ibu: '',
-      pekerjaan_ibu: '',
-      telepon_ibu: '',
-      alamat_ortu: '',
-      program: '',
-      mata_pelajaran: [],
-      hari: '',
-      waktu: '',
-      referensi: '',
-      persetujuan: false,
-      tanggal_daftar: new Date().toISOString().split('T')[0]
-    });
+    // Submit ke backend API
+    try {
+      const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+      const response = await fetch(`${BACKEND_URL}/api/registrations`, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(formData),
+      });
+
+      const data = await response.json();
+
+      if (response.ok && data.success) {
+        toast({
+          title: "Pendaftaran Berhasil!",
+          description: data.message,
+        });
+
+        // Reset form
+        setFormData({
+          nama_lengkap: '',
+          nama_panggilan: '',
+          jenis_kelamin: '',
+          tempat_lahir: '',
+          tanggal_lahir: '',
+          asal_sekolah: '',
+          kelas: '',
+          alamat: '',
+          telepon: '',
+          email: '',
+          nama_ayah: '',
+          pekerjaan_ayah: '',
+          telepon_ayah: '',
+          nama_ibu: '',
+          pekerjaan_ibu: '',
+          telepon_ibu: '',
+          alamat_ortu: '',
+          program: '',
+          mata_pelajaran: [],
+          hari: '',
+          waktu: '',
+          referensi: '',
+          persetujuan: false,
+          tanggal_daftar: new Date().toISOString().split('T')[0]
+        });
+      } else {
+        toast({
+          title: "Pendaftaran Gagal",
+          description: data.message || "Terjadi kesalahan saat memproses pendaftaran",
+          variant: "destructive"
+        });
+      }
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      toast({
+        title: "Pendaftaran Gagal",
+        description: "Tidak dapat terhubung ke server. Silakan coba lagi.",
+        variant: "destructive"
+      });
+    }
   };
 
   const kelasOptions = [
