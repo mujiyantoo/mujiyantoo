@@ -65,7 +65,7 @@ const HomePage = () => {
               </div>
               <div className="text-center">
                 <p className="text-3xl md:text-4xl font-bold text-[#F89E3C]">500+</p>
-                <p className="text-sm text-gray-600">Siswa Aktif</p>
+                <p className="text-sm text-gray-600">Alumni Sukses</p>
               </div>
               <div className="text-center">
                 <p className="text-3xl md:text-4xl font-bold text-[#5A9C9B]">95%</p>
