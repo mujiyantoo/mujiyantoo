@@ -222,8 +222,8 @@ export const contactInfo = {
     {
       id: 2,
       type: 'Cabang',
-      address: 'JL. Alun alun selatan, Kaum No.183 Panumbangan - Ciamis',
-      mapUrl: 'https://maps.google.com/?q=Ciamis'
+      address: 'JL. Raya Panumbangan Kp. Sidangharja RT.005/RW.005 Ds. Tanjungmulya Kec. Panumbangan Kabupaten Ciamis (Masuk sebelah Bakso Aqila, 30 meter dari Jl. Raya)',
+      mapUrl: 'https://maps.google.com/?q=Panumbangan+Ciamis'
     }
   ],
   social: {
