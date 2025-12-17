@@ -84,8 +84,18 @@ async def get_all_registrations(
         if program:
             query["program"] = program
         
-        # Get data dengan pagination
-        cursor = db.registrations.find(query).skip(skip).limit(limit).sort("created_at", -1)
+        # Get data dengan pagination (with projection for optimization)
+        cursor = db.registrations.find(
+            query,
+            {
+                "_id": 1,
+                "nama_lengkap": 1,
+                "program": 1,
+                "telepon": 1,
+                "kelas": 1,
+                "created_at": 1
+            }
+        ).skip(skip).limit(limit).sort("created_at", -1)
         registrations = await cursor.to_list(length=limit)
         
         # Convert ObjectId to string dan format data
