@@ -12,6 +12,7 @@ import { CheckCircle, User, Users, GraduationCap, Info } from 'lucide-react';
 
 const PendaftaranPage = () => {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
   const [formData, setFormData] = useState({
     // Data Siswa
     nama_lengkap: '',
