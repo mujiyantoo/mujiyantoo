@@ -210,7 +210,7 @@ export const galleryImages = [
 export const contactInfo = {
   phone: [
     { name: 'Nia Kurniawati', number: '087871079085' },
-    { name: 'Slamet Irawan', number: '0896 7655 8634' }
+    { name: 'Slamet Irawan', number: '08954 028 47670' }
   ],
   locations: [
     {
