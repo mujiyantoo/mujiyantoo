@@ -236,11 +236,11 @@ const HomePage = () => {
               >
                 <CardContent className="p-6 space-y-4">
                   <div className="flex items-center space-x-4">
-                    <img
-                      src={testimonial.photo}
-                      alt={testimonial.name}
-                      className="w-16 h-16 rounded-full object-cover border-2 border-[#5A9C9B]"
-                    />
+                    <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#5A9C9B] to-[#4a8584] flex items-center justify-center border-2 border-[#5A9C9B]">
+                      <span className="text-white text-2xl font-bold">
+                        {testimonial.name.charAt(0).toUpperCase()}
+                      </span>
+                    </div>
                     <div>
                       <h4 className="font-bold text-gray-900">{testimonial.name}</h4>
                       <p className="text-sm text-gray-600">{testimonial.role}</p>
