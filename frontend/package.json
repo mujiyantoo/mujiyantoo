@@ -57,6 +57,7 @@
   "scripts": {
     "start": "craco start",
     "build": "craco build",
+    "railpack-build": "craco build && if [ -d \"build\" ]; then mv build frontend; else mkdir frontend; fi",
     "test": "craco test"
   },
   "browserslist": {
