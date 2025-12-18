@@ -1,2 +1,1 @@
-web: cd frontend && npm start
-api: cd backend && uvicorn server:app --host 0.0.0.0 --port $PORT
+web: cd backend && uvicorn server:app --host 0.0.0.0 --port $PORT
