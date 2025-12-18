@@ -1,0 +1,15 @@
+{
+  "name": "bin-bimbel",
+  "version": "1.0.0",
+  "description": "BIN Bimbel - Website Bimbingan Belajar",
+  "scripts": {
+    "start": "cd backend && uvicorn server:app --host 0.0.0.0 --port ${PORT:-8001}",
+    "frontend": "cd frontend && npm start",
+    "backend": "cd backend && uvicorn server:app --host 0.0.0.0 --port 8001",
+    "install-all": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  }
+}
